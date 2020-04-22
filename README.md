@@ -21,8 +21,7 @@ Mettre aussi des liens permettant d’avoir des infos supplémentaire en survola
 Faire une base de donnée reprenant toute les informations (nom des joueurs, tournois, dates) cela relié avec des tables d'adressages.
 Il y aura 4 webservices crée par chacun des membres du groupe.
 Les procédure SQL permettent de faire un premier trie. 
-
-# détail api rest,
+# détail api rest
 Ce service sera écrit par De Roy Maxime  
 Un webservice pour enregistrer de nouvelles données
 
@@ -34,4 +33,3 @@ Un webservice pour réinitialiser la recherche
 
 Ce service sera écrit par de Pret Roose de Calesberg Mikaël  
 Un webservice permettant au utilisateur de modifier la page web
-
