@@ -2,11 +2,9 @@
     position: relative;
     width: 660px;
     height: 310px;
-    padding: 15px;
-    margin: 0 auto 2em;
-    border: 1px solid blanchedalmond;
-    background: #FF0000;
-
+    margin:  0 auto 2em;
+    border: 1px solid black;
+    background: black;
 }
 #slideshow:before,
 #slideshow:after {
@@ -60,7 +58,7 @@
 #slideshow figcaption {
     position: absolute;
     left: 0; height: right:0; bottom: 5px;
-    padding: 20px;
+    padding: 20px 200px 20px 0px;
     margin: 0px;
     border-top: 1px solid gold;
     text-align: center;
@@ -68,177 +66,5 @@
     word-spacing: 0.5em;
     font-family: Georgia, "Times New Roman", sans-serif;
     background: #013220;
-    color: darkblue;
+    color: white;
 }
-@keyframes slider {
-    0%, 20%, 100% {left: 0}
-    25%, 45% {left: -100%}
-    50%, 70% {left: -200%}
-    75%, 95% {left: -300%}
-}
-#slideshow .slider {
-    animation: slider infinite;
-}
-#timeliner {
-    position: absolute;
-    background: black;
-    bottom: 15px;
-    left: 15px;
-    height: 1px;
-    width: 0;
-    animation: timeliner infinite;
-}
-@keyframes timeliner {
-    0%, 25%, 50%, 75%, 100% {width: 0; }
-    20%, 45%, 70%, 90% {width: 640px; }
-}
-
-@keyframes figcaptionner {
-    0%, 25%, 50%, 75%, 100% { bottom: -55px; }
-    5%, 20%, 30%, 45%, 55%, 70%,80%, 95% {bottom: 5px; }
-}
-#slideshow figcaptionner {
-    animation: figcaptationner infinite;
-}
-
-#slideshow .commands {
-    position: absolute;
-    top: 45%;
-    padding: 5px 13px;
-    border-bottom:0;
-    font-size: 1.3em;
-    color: #aaa;
-    text-decoration:none;
-    background-color: #eee;
-    background-image: linear-gradient(#fff,#ddd);
-    text-shadow: 0 0 1px #aaa;
-    border-radius: 50%;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-#slideshow .prev { left: -48px; }
-#slideshow .next { right: -48px; }
-
-#slideshow .commands { display:none; }
-#slideshow .commands1 {	display: block; }
-
-
-
-#slideshow .c_slider {
-    position: absolute;
-    left:0; top:0;
-    width: 400%;
-    height: 310px;
-    /* multiple background */
-    background: url(img/tournoi1.png) 0 0 no-repeat,
-    url(img/tournoi2.png) 640px 0 no-repeat,
-
-    transition: background 1s;
-}
-
-/* on cache le slider */
-.sl_i:target ~ #slideshow .slider									{ visibility: hidden }
-/* on planque la 1ère pastille (cf. bonux suivant) */
-.sl_i:target ~ #slideshow .dots_commands li:first-child a:after		{ display:none; }
-/* pour afficher la 2ème pastille (cf. bonux suivant) */
-.sl_i:target ~ #slideshow .dots_commands li:first-child a:before	{ display:block; }
-
-/* lorsque on cible le premier slider */
-/* on cache tous les "précédent" et "suivant" */
-#sl_i1:target ~ #slideshow .commands								{ display: none; }
-/* on affiche seulement deux flèches */
-#sl_i1:target ~ #slideshow .commands1								{ display: block; }
-/* correspond au décalage des images */
-#sl_i1:target ~ #slideshow .c_slider								{ background-position: 0 0, 640px 0, 1280px 0, 1920px 0; }
-/* on place la pastille tout à gauche */
-#sl_i1:target ~ #slideshow .dots_commands li:first-child a:before	{ left:0; }
-
-/* même procédé lorsqu'on cible le second slide */
-#sl_i2:target ~ #slideshow .commands								{ display: none; }
-#sl_i2:target ~ #slideshow .commands2								{ display: block; }
-#sl_i2:target ~ #slideshow .c_slider								{ background-position: -640px 0, 0 0, 640px 0, 1280px 0; }
-#sl_i2:target ~ #slideshow .dots_commands li:first-child a:before	{ left:18px; }
-
-/* puis le 3ème */
-#sl_i3:target ~ #slideshow .commands								{ display: none; }
-#sl_i3:target ~ #slideshow .commands3								{ display: block; }
-#sl_i3:target ~ #slideshow .c_slider								{ background-position: -1280px 0, -640px 0, 0 0, 640px 0; }
-#sl_i3:target ~ #slideshow .dots_commands li:first-child a:before	{ left:36px; }
-
-/* et enfin le 4ème */
-#sl_i4:target ~ #slideshow .commands								{ display: none; }
-#sl_i4:target ~ #slideshow .commands4								{ display: block; }
-#sl_i4:target ~ #slideshow .c_slider								{ background-position: -1920px 0, -1280px 0, -640px 0, 0 0; }
-#sl_i4:target ~ #slideshow .dots_commands li:first-child a:before	{ left:54px; }
-
-
-.dots_commands  {
-    padding:0;
-    margin:32px 0 0;
-    text-align: center;
-}
-.dots_commands li {
-    display: inline;
-    padding:0; margin:0;
-}
-.dots_commands a {
-    position: relative;
-    display: inline-block;
-    height:8px; width: 8px;
-    margin: 0 5px;
-    text-indent: -9999px;
-    background: #fff;
-
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
-
-}
-/* quelques styles au focus */
-.dots_commands a:focus {
-    outline: none;
-    background: orange;
-}
-.dots_commands li:first-child a { z-index: 25; }
-
-/* on style after et before, on utilisera les deux */
-.dots_commands li:first-child a:after,
-.dots_commands li:first-child a:before {
-    position: absolute;
-    top: 0; left: 0;
-    content: " ";
-    width: 8px; height: 8px;
-    background: #bd9b83;
-    z-index:20;
-
-    border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.55) inset;
-}
-/* on anime "after" */
-.dots_commands li:first-child a:after {
-    animation: dotser 32s infinite;
-}
-/* on cache "before", on l'utilise uniquement au clic (cf. bonux précédent) */
-.dots_commands li:first-child a:before { display:none; }
-
-/* c'est parti pour l'animation ! */
-@keyframes dotser {
-    0%, 100% 	{ opacity: 1; left: 0; 		}
-
-    20%			{ opacity: 1; left: 0;		}
-    22%			{ opacity: 0; left: 0;		}
-    23%			{ opacity: 0; left: 18px;	}
-    25%			{ opacity: 1; left: 18px;	}
-
-    45%			{ opacity: 1; left: 18px;	}
-    47%			{ opacity: 0; left: 18px;	}
-    48%			{ opacity: 0; left: 36px;	}
-    50%			{ opacity: 1; left: 36px;	}
-
-    70%			{ opacity: 1; left: 36px;	}
-    72%			{ opacity: 0; left: 36px;	}
-    73%			{ opacity: 0; left: 54px;	}
-    75%			{ opacity: 1; left: 54px;	}
-
-    95%			{ opacity: 1; left: 54px;	}
-    97%			{ opacity: 0; left: 54px;	}
-    98%			{ opacity: 0; left: 0;	}
