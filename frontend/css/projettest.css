@@ -58,13 +58,22 @@
 #slideshow figcaption {
     position: absolute;
     left: 0; height: right:0; bottom: 5px;
-    padding: 20px 200px 20px 0px;
+    padding: 10px 350px 10px 0px;
     margin: 0px;
     border-top: 1px solid gold;
     text-align: center;
     letter-spacing: 0.5em;
     word-spacing: 0.5em;
-    font-family: Georgia, "Times New Roman", sans-serif;
-    background: #013220;
+    font-family: Georgia, Calibri, sans-serif;
+    background: blue;
     color: white;
+}
+@keyframes slider {
+    0%, 20%, 100% {left: 0}
+    25%, 45% {left: -100%}
+    50%, 70% {left: -200%}
+    75%, 95% {left: -300%}
+}
+#slideshow .slider {
+    animation: slider 5s infinite;
 }
