@@ -75,5 +75,12 @@
     75%, 95% {left: -300%}
 }
 #slideshow .slider {
-    animation: slider 5s infinite;
+    animation: slider 200s infinite;
+}
+@keyframes figcaption {
+    0%, 25%, 50%, 75%, 100% { bottom: -55px; }
+    5%, 20%, 30%, 45%, 55%, 70%,80%, 95% {bottom: 5px; }
+}
+#slideshow figcaption {
+    animation: figcaption 5s infinite;
 }
