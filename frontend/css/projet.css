@@ -1,13 +1,54 @@
+.imageLogo{
+ width: 500px;
+ height: 200px;
+ margin-left: -80px;
+}
+
+#banniere #bleu{
+ width: 1895px;
+ height: 350px;
+}
+
+#banniere #tete{
+ width: 900px;
+ height: 350px;
+ margin: -354px 50px 100px 500px;
+}
+
+#tennis h1 {
+ margin-left: 725px;
+ font-size: 75px;
+ font-weight: bold;
+}
+#tennis img {
+ width: 100x;
+ height: 100px;
+}
+
+#tennis img {
+ width: 400px;
+ height: 400px;
+}
+
+#tennis img {
+ width: 400px;
+ height: 400px;
+}
+
+#tennis img {
+ width: 400px;
+ height: 400px;
+}
 body{
-	
+
 }
 
 header{
-	
+
 }
 
 main{
-	
+
 }
 
 footer{
@@ -19,9 +60,9 @@ article{
 }
 
 h1{
-	
+
 }
 
 h2{
-	
+
 }
