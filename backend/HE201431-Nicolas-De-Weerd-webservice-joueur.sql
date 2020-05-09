@@ -1,11 +1,8 @@
 CREATE PROCEDURE "DBA"."getTutu"()
-result (id char(255), annee char(4), competition char(30), sportif char(30), sport char(30))
+result (id char(255),sportif char(30))
 BEGIN
-	select tbannee.joueurId, annee, tournoi, joueur, sport
-	from tbannee
-	left join tbtournoi on tbannee.tournoiId = tbtournoi.tournoiId
-	left join tbjoueur on tbannee.joueurId = tbjoueur.joueurId
- 	left join tbsport on tbtournoi.sportId = tbsport.sportId
+ 	select joueurId, joueur
+ 	from tbjoueur
 END;
 
 CREATE PROCEDURE "DBA"."getTrouve"(in sportif int)
@@ -23,4 +20,5 @@ END;
 
 CREATE SERVICE "joueur" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS call "dba"."getTutu"();
 
-CREATE SERVICE "getTrouveSportif" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS call getTrouve(in sportif int);
+CREATE SERVICE "getTrouveSportif" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS call getTrouve(:sportif);
+CREATE SERVICE "getTrouveSportif" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call".dba"."getTrouve"(:sportif);
