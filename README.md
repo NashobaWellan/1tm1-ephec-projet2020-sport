@@ -33,7 +33,7 @@ il sera en JSON
 
 Ce service sera écrit par De Weerd Nicolas  
 Un webservice pour récupérer les informations des tables  
-il sera en Html
+il sera en JSON/AJAX
 
 Ce service sera écrit par Afonso Beatriz Rodrigo  
 Un webservice pour réinitialiser la recherche  
