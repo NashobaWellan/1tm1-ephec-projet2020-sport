@@ -37,8 +37,8 @@ il sera en JSON/AJAX
 
 Ce service sera écrit par Afonso Beatriz Rodrigo  
 Un webservice pour réinitialiser la recherche  
-il sera en Json
+il sera en JSON
 
 Ce service sera écrit par de Pret Roose de Calesberg Mikaël  
 Un webservice permettant au utilisateur de modifier la page web  
-il sera en Json
+il sera en JSON
