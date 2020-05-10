@@ -1,8 +1,5 @@
 "use strict"
 
-//Projet Database
-//------------------
-// 1TM1 / de Pret / Mikaël / HE201775
 /*
 function showHint(str) {
 	var selectedValue = selectBox.text[selectBox.selectedIndex].value;
