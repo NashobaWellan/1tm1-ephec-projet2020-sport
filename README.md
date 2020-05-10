@@ -41,7 +41,7 @@ il sera en JSON
 
 Ce service sera écrit par de Pret Roose de Calesberg Mikaël  
 Un webservice permettant au utilisateur de modifier la page web  
-il sera en JSON
+il sera en JSON/AJAX
 
 # Diagramme ER
 
