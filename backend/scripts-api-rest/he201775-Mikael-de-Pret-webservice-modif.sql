@@ -1,12 +1,21 @@
 CREATE PROCEDURE "DBA"."alterartion"(in sportif char, sportifNew char )
 BEGIN
-    declare @sportifid int;
-    set @sportifid = (SELECT joueurId
+    DECLARE @sportifid int;
+    SET @sportifid = (SELECT joueurId
         FROM tbjoueur
-    where joueur = sportif);
+    WHERE joueur = sportif);
 	UPDATE dba.tbjoueur
-     set joueur = sportifNew
-     where joueurId = @sportifid;
+     SET joueur = sportifNew
+     WHERE joueurId = @sportifid;
 END
 
-CREATE SERVICE "joueur" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'PUT' AS call "DBA"."alterartion"();
+CREATE SERVICE "alterr" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'PUT' AS call "DBA"."alterartion"();
+
+CREATE PROCEDURE "DBA"."getFind"(in sportif char)
+BEGIN
+    SELECT joueur
+        FROM tbjoueur
+        WHERE joueur LIKE '%a'
+END
+
+CREATE SERVICE "find" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'GET' AS call "DBA"."getFind"();
