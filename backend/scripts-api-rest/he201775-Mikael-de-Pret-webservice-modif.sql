@@ -9,7 +9,7 @@ BEGIN
      WHERE  joueurId = sportifid;
 END 
 
-CREATE SERVICE "alterr" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'PUT' AS call "DBA"."putAlterartion"();
+CREATE SERVICE "alterr" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'PUT' AS call "DBA"."putAlterartion"(:sportif, :sportifNew);
 
 CREATE PROCEDURE "DBA"."getFind"(in sportif char)
 BEGIN
