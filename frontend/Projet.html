@@ -2,10 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Championships</title>
-    <!-- a modifier -->	
+    <title>1tm1-ephec-projet2020-sport</title>
     <script src="js/projet.js"></script>
-    <!-- a modifier -->	
+	<script src="js/he201775-Mikael-de-Pret-webservice-modif.js"></script>
     <link rel="stylesheet" href="css/projet.css">
 
 </head>
@@ -13,7 +12,7 @@
 <body onload='initPage();'>
     <header>
         <div id="logo">
-            <p><img src="img/logofinal2.png" alt="Personne qui tient un flambeau en main." class="imageLogo"></p>
+            <p><img src="img/logo.png" alt="Personne qui tient un flambeau en main." class="imageLogo"></p>
         </div>
     </header>
     <div id="banniere">
@@ -36,17 +35,19 @@
 
 		<p><b>Start typing a name in the input field below:</b></p>
 					 
-    		<form  id="myForm" method="put" action="modifier" onsubmit="modifier()">
+    		<form  id="myForm" method="put" action="modifier">
 				<fieldset>
 					<legend>Changement</legend>
 					<!-- nom/prenom -->
-						First name: <input type="text" id="modif" onkeyup="showHint(this.value)">
-						<p>Suggestions: <span id="txtHint"></span></p>
-							
-						<label>Change Nom/Prenom : </label>
-						<input type="text" name="sportif" placeholder="Nom/Prenom" id="newModif" value="Gémy">
-						<button type="submit"><b>Soumettre</b></button> 
+						<!-- First name: <input type="text" id="mod" onkeyup="showHint(this.value)"> -->
+						<!-- <p>Suggestions: <span id="txtHint"></span></p> -->
+						<label>Joueur à changer : </label>
+						<select id="modif"></select>
+						<label>Changement : </label>
+						<input type="text" name="sportif" placeholder="Nom/Prenom" id="newModif" value="" placeholder="prenom nom">
+						<button type="button" onclick="modifier()"><b>Soumettre</b></button> 
 						<button type="reset"><b>Réinitialiser</b></button>
+						<p>Message : <em><span></span></em></p>
 				</fieldset>
 			</form>
     </div>
@@ -122,4 +123,3 @@
 
     </footer>
 </html>
-
