@@ -14,13 +14,11 @@ function initPage(){
 }
 
 function creerTableau(rep, id){
-	console.log(rep)
 	let ligne = '';
 	for (let e of rep) {
 		ligne += '<option value=' + e.id + '>' + e.sportif + '</option>' + '\n';
 	}
 	document.getElementById(id).innerHTML = ligne;
-	//document.getElementById('recap').innerHTML = '<p onclick="trouveSportif(\' 16 \');">i</p>' + '\n';
 }
 
 function trouveSportif(){
@@ -32,7 +30,6 @@ function trouveSportif(){
 	xhr.onload = // callback : fonction anonyme
 	function(){
 		tableau(JSON.parse(this.responseText));
-		//console.log(this.responseText);
 	}
 	xhr.send();
 }
