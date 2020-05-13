@@ -18,7 +18,7 @@ function showHint(str) {
   }
 }
 */
-function creerTableau1(rep, id){
+function creerTableau1(rep, id)function creerTableau1(rep, id){
 	let ligne1 = '';
 	for (let a of rep) {
 		ligne1 += '<option value=' + a.id + '>' + a.sportif + '</option>' + '\n';
@@ -30,21 +30,31 @@ function modifier(){
 	var selectBox1 = document.getElementById("modif");
     var selectedValue1 = selectBox1.options[selectBox1.selectedIndex].value;
 	var selectBox2 = document.getElementById("newModif");
-    var selectedValue2 = selectBox2.options[selectBox2.selectedIndex].value;
+
     console.log(selectedValue1);
-	console.log(selectedValue2);
+
 	let xhr = new XMLHttpRequest();
 	// xhr.alterr;
-	xhr.open('put', 'alterr?sportif=?' + selectedValue1 + '?sportifNew=' + selectedValue2, true);
-	// EXEC SQL PUT tbjoueur FROM :joueurID, :Sportif;
-	// PUT http[s]://<host:88>/[public/]odata/applications/{v1|latest}/{appid}/Connections(‘{registrationID}’)
-    // xhr.open('put', 'alterr?sportif=&newSportif=', true); // préparer 
+	xhr.open('get', 'alterr?sportif=' + selectedValue1 + '&sportifNew=' + selectBox2.value, true);
+
 	
     xhr.onload = // callback : fonction anonyme
         function(){
-            JSON.stringify(this.responseText);
-			// //console.log(this.responseText);
+            var donnee = JSON.stringify(this.responseText);
+			//console.log(this.responseText);
          } 
     xhr.send();
+
 }
 
+function valide() {
+	let test = newModif.value;
+	let okf = "";
+	if(!test) {
+		document.getElementById("ok").innerHTML = "Il n'y a eu aucun changement"
+	}
+	else{
+		okf += "<span>" + "le joueur selectionné à bien été modifié en " + test + "</span>"
+		document.getElementById("ok").innerHTML = okf
+	}
+}
