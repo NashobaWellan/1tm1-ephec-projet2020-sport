@@ -9,6 +9,8 @@ function initPage(){
 	xhr.onload = // callback : fonction anonyme
 	function(){
 		creerListe(JSON.parse(this.responseText), 'selection');
+		creerTableau1(JSON.parse(this.responseText), 'modif');
+		creerTableau2(JSON.parse(this.responseText), 'sport');
 	};
 	xhr.send() // envoyer
 }
