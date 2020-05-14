@@ -24,7 +24,6 @@ function creerListe(rep, id){
 function trouveSportif(){
 	var selectBox = document.getElementById("selection");
    	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-	console.log(selectedValue);
 	let xhr = new XMLHttpRequest();
 	xhr.open('get', 'getTrouveSportif?sportif=' + selectedValue, true); // préparer
 	xhr.onload = // callback : fonction anonyme
