@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>1tm1-ephec-projet2020-sport</title>
-    <script src="js/projet.js"></script>
-	<script src="js/he201775-Mikael-de-Pret-webservice-modif.js"></script>
+    <script src="js/HE201431-Nicolas-De-Weerd-afficher.js"></script>
+	<script src="js/HE201775-Mikael-de-Pret-modif.js"></script>
     <link rel="stylesheet" href="css/projet.css">
 
 </head>
@@ -38,15 +38,17 @@
     		<form  id="myForm" method="put" action="modifier">
 				<fieldset>
 					<legend>Changement</legend>
-					<!-- nom/prenom -->
-						<!-- First name: <input type="text" id="mod" onkeyup="showHint(this.value)"> -->
-						<!-- <p>Suggestions: <span id="txtHint"></span></p> -->
+					
 						<label>Joueur à changer : </label>
 						<select id="modif"></select>
 						<label>Changement : </label>
-						<input type="text" name="sportif" placeholder="Nom/Prenom" id="newModif" value="" placeholder="prenom nom">
-						<button type="button" onclick="modifier()"><b>Soumettre</b></button> 
-						<button type="reset"><b>Réinitialiser</b></button>
+						<input type="text" name="sportif" id="newModif" value="" placeholder="prenom nom">
+						<label>Changement sport: </label>
+						<select id="sport"></select>
+						<input type="text" name="sport" placeholder="sport" id="newSport" value="">
+						<button type="button" onclick="modifier()"><b>Soumettre</b></button>
+					<button type="button" onclick="modifier1()"><b>Soumettre1</b></button>
+					<button type="reset"><b>Réinitialiser</b></button>
 						<p>Message : <em><span></span></em></p>
 				</fieldset>
 			</form>
