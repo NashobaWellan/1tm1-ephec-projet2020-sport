@@ -27,9 +27,6 @@ Il y aura 4 webservices crée par chacun des membres du groupe.
 Les procédures SQL permettent de faire un premier trie.  
 
 # détail api rest
-Ce service sera écrit par De Roy Maxime  
-Un webservice pour enregistrer de nouvelles données  
-il sera en JSON
 
 ## Webservice de De Weerd Nicolas
 Le premier webservice nommer "joueur" permet via une procédure nommée "getMontreJoueur()"  
@@ -60,10 +57,6 @@ Ensuite on appele via un XHR le webservice auquelle on rajoute la valeur pour ap
 Puis dans une fonction anonyme on appele la fonction "tableau(data)" avec comme paramètre un "JSON.parse"  
 Cette fonction "tableau" initie une variable cellule qui est vide,  
 puis on fait une boucle qui va aller lire le array et rajouter dans cellule les lignes pour le tableau avec les données du joueur.  
-
-Ce service sera écrit par Afonso Beatriz Rodrigo  
-Un webservice pour réinitialiser la recherche  
-il sera en JSON
 
 Ce service sera écrit par de Pret Roose de Calesberg Mikaël  
 Un webservice permettant au utilisateur de modifier la page web  
