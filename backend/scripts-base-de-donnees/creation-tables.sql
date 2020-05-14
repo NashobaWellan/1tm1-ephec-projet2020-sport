@@ -1,29 +1,30 @@
 create table tbjoueur (
         joueurId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
-        joueur char(30) not null,
-CONSTRAINT pk_tbjoueur PRIMARY KEY (joueurId),
+        joueurNom char(50) not null,
+	joueurPrenom char(30) not null,
+PRIMARY KEY (joueurId),
 );
 
 create table tbsport (
         sportId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
         sport char(30) not null,
         
-constraint pk_tbsport PRIMARY KEY (sportId),
+PRIMARY KEY (sportId),
 );
 
 create table tbtournoi ( 
         tournoiId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
-        tournoi char(30) not null,
-	sportId char(255) not null,
-CONSTRAINT pk_tbtournoi PRIMARY KEY (tournoiId),
-constraint fk_tbsport_tbtournoi foreign key (sport_sportId) references tbsport (sportId)
+        tournoi char(100) not null,
+	sportId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
+PRIMARY KEY (tournoiId),
+foreign key (sportId) references tbsport (sportId)
 );
 
 create table tbannee (
-        tournoiId char(255) not null,
-        joueurId char(255) not null,
         annee char(4) not null,
-CONSTRAINT pk_tbannee PRIMARY KEY (tournoiId, joueurId),
-constraint fk_tbannee_tbjoueur foreign  key (joueur_joueurId) reference tbjoueur (joueurId),
-constraint fk_tbannee_tbtournoi foreign key (tournoi_tournoiId) reference tbtournoi (tournoiId)
+	joueurId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
+	tournoiId INTEGER NOT NULL DEFAULT AUTOINCREMENT,
+PRIMARY KEY (annee),
+foreign key (joueurId) reference tbjoueur (joueurId),
+foreign key (tournoiId) reference tbtournoi (tournoiId)
 );
