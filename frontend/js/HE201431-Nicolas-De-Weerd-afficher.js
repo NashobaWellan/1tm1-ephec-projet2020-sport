@@ -8,12 +8,12 @@ function initPage(){
 	xhr.open('get', 'joueur', true); // préparer
 	xhr.onload = // callback : fonction anonyme
 	function(){
-		creerTableau(JSON.parse(this.responseText), 'selection');
+		creerListe(JSON.parse(this.responseText), 'selection');
 	};
 	xhr.send() // envoyer
 }
 
-function creerTableau(rep, id){
+function creerListe(rep, id){
 	let ligne = '';
 	for (let e of rep) {
 		ligne += '<option value=' + e.id + '>' + e.sportif + '</option>' + '\n';
