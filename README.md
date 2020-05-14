@@ -48,7 +48,7 @@ puis via écrire là ou se trouve l'id selctionner les options de la liste.
 
 Le deuxième webservice "getTrouveSportif" permet via la procédure "getTrouve(:sportif)"
 de donner les informations des joueurs via l'Id obtenu de la liste déroulante.
-Dans la procédure "getTrouve" on va faire un "select" qui va aller chercher
+Dans la procédure "getTrouve(:sportif)" on va faire un "select" qui va aller chercher
 le tournoi de la table tournoi, le sport de la table sport et l'annee de la table annee
 via des "join" et un "where" pour donner l'id du joueur et on fini par un tri des annee
 avec un "order".
