@@ -1,9 +1,15 @@
-CREATE  PROCEDURE "DBA"."putAlterartion"(in sportif char, sportifNew char )
+ALTER PROCEDURE "DBA"."putAlterartion"(in sportif int, sportifNew char(30), sportt int, sportNew char(30))
 BEGIN 
-  UPDATE dba.tbjoueur
-     SET  joueur = sportifNew
-     where tbjoueur.joueurId = sportif
-END 
+/*
+	UPDATE dba.tbjoueur, dba.tbsport
+     SET  joueur = sportifNew, sport = sportNew
+     WHERE  tbjoueur.joueurId = sportif AND (tbsport.sportId = sport)
+   */ 
+
+    UPDATE dba.tbsport
+     SET sport = sportNew
+    WHERE tbsport.sportId = sportt 
+END
 
 CREATE SERVICE "alterr" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" METHODS 'PUT' AS call "DBA"."putAlterartion"(:sportif, :sportifNew);
 
