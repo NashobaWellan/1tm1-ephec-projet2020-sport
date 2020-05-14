@@ -31,7 +31,7 @@ Ce service sera écrit par De Roy Maxime
 Un webservice pour enregistrer de nouvelles données  
 il sera en JSON
 
-Webservice de De Weerd Nicolas
+##Webservice de De Weerd Nicolas
 Le premier webservice nommer "joueur" permet via une procédure nommée "getMontreJoueur()"
 d'appeler la liste des joueurs en Json en faisant un select dans la table "joueur" 
 pour appeler les joueurId, joueurNom et joueurPrénom
