@@ -71,4 +71,4 @@ il sera en JSON/AJAX
 
 # Diagramme ER
 
-![alt text](https://github.com/de-Pret-Mikael/1tm1-ephec-projet2020-sport/blob/master/frontend/img/table.PNG) 
+![alt text](https://github.com/de-Pret-Mikael/1tm1-ephec-projet2020-sport/blob/master/frontend/img/oooo.PNG) 
