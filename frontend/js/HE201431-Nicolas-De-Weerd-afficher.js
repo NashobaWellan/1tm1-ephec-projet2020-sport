@@ -8,24 +8,23 @@ function initPage(){
 	xhr.open('get', 'joueur', true); // préparer
 	xhr.onload = // callback : fonction anonyme
 	function(){
-		creerListe(JSON.parse(this.responseText), 'selection');
-		creerTableau1(JSON.parse(this.responseText), 'modif');
-		creerTableau2(JSON.parse(this.responseText), 'sport');
+		creerTableau(JSON.parse(this.responseText), 'selection');
 	};
 	xhr.send() // envoyer
 }
 
-function creerListe(rep, id){
+function creerTableau(rep, id){
 	let ligne = '';
 	for (let e of rep) {
-		ligne += '<option value=' + e.id + '>' + e.sportif + '</option>' + '\n';
+		ligne += '<option value=' + e.id + '>' + e.sportif + ' ' + e.sportifPrenom + '</option>' + '\n';
 	}
 	document.getElementById(id).innerHTML = ligne;
 }
 
 function trouveSportif(){
 	var selectBox = document.getElementById("selection");
-   	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+	console.log(selectedValue);
 	let xhr = new XMLHttpRequest();
 	xhr.open('get', 'getTrouveSportif?sportif=' + selectedValue, true); // préparer
 	xhr.onload = // callback : fonction anonyme
