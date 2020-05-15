@@ -13,7 +13,7 @@ BEGIN
 	join tbjoueur on tbparticipation.joueurId = tbjoueur.joueurId
 	join tbtournoi on tbparticipation.tournoiId = tbtournoi.tournoiId
 	join tbsport on tbtournoi.sportId = tbsport.sportId
-	where tbpartiipation.joueurId = sportif
+	where tbparticipation.joueurId = sportif
 	order by annee
 END;
 
