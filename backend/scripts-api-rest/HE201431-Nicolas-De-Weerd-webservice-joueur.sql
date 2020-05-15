@@ -1,19 +1,19 @@
 CREATE PROCEDURE "DBA"."getMontreSportif"()
-result (id char(255),sportif char(30))
+result (id char(255),sportif char(50), sportifPrenom char(30))
 BEGIN
- 	select joueurId, joueur
+ 	select joueurId, joueurNom, joueurPrenom
  	from tbjoueur
 END;
 
 CREATE PROCEDURE "DBA"."getTrouve"(in sportif int)
 
 BEGIN 
-	Select tbjoueur.joueur, tbtournoi.tournoi, tbsport.sport, annee
-	from tbannee 
-	join tbjoueur on tbannee.joueurId = tbjoueur.joueurId
-	join tbtournoi on tbannee.tournoiId = tbtournoi.tournoiId
+	Select tbjoueur.joueurNom, tbtournoi.tournoi, tbsport.sport, annee
+	from tbparticipation 
+	join tbjoueur on tbparticipation.joueurId = tbjoueur.joueurId
+	join tbtournoi on tbparticipation.tournoiId = tbtournoi.tournoiId
 	join tbsport on tbtournoi.sportId = tbsport.sportId
-	where tbannee.joueurId = sportif
+	where tbpartiipation.joueurId = sportif
 	order by annee
 END;
 
