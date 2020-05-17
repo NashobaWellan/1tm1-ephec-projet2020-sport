@@ -41,3 +41,24 @@ function modifier(){
     xhr.send();
 
 }
+
+function valide() {
+	let nom = newModifN.value;
+	let prenom = newModifP.value;
+	let okf = "";
+	if(!nom) {
+		document.getElementById("!ok").innerHTML = " et Il n'y a eu aucun changement pour le nom "
+	}
+	else {
+		okf += '<span>' + 'le nom du joueur selectionné à bien été modifié en ' + nom + '</span>'
+		document.getElementById("ok").innerHTML = okf
+	}
+	if(!prenom) {
+		document.getElementById("!ok").innerHTML = " et Il n'y a eu aucun changement pour le prenom "
+	}
+	else{
+		okf += '<span>' + ' le prenom du joueur selectionné à bien été modifié en ' + prenom + '</span>'
+		document.getElementById("ok").innerHTML = okf
+	}
+}
+
