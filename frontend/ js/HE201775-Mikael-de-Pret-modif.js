@@ -12,12 +12,31 @@ function creerTableau1(rep, id){
 	document.getElementById(id).innerHTML = ligne1;
 }
 
+
+
+function creerTableau2(rep, id){
+	let ligne2 = '';
+	for (let b of rep) {
+		ligne2 += '<option value=' + b.id + '>' + b.sportt + '</option>' + '\n';
+	}
+	document.getElementById(id).innerHTML = ligne2;
+}
+
+
 function creerTableau3(rep, id){
 	let ligne3 = '';
 	for (let a of rep) {
 		ligne3 += '<option value=' + a.id + '>' + a.id + ' ' + a.sportifPrenom + '</option>' + '\n';
 	}
 	document.getElementById(id).innerHTML = ligne3;
+}
+
+function creerTableau4(rep, id){
+	let ligne4 = '';
+	for (let a of rep) {
+		ligne4 += '<option value=' + a.id + '>' + a.tournoii + '</option>' + '\n';
+	}
+	document.getElementById(id).innerHTML = ligne4;
 }
 
 function modifier(){
@@ -27,12 +46,12 @@ function modifier(){
 	var selectedValue3 = selectBox3.options[selectBox3.selectedIndex].value;
 	var selectBox2 = document.getElementById("newModifN");
 	var selectBox21 = document.getElementById("newModifP");
-	
+
 	let xhr = new XMLHttpRequest();
 	// xhr.alterr;
-	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value, true);
+	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value +'&sportifP=' + selectedValue3 +'&sportifNewP=' + selectBox21.value /*+ '&sportttt=' + selectedValue5 + '&sportNew=' + selectBox4.value *//*+ '&tournoiiii' + selectedValue8 + '&tournoiNew' + selectBox9*/, true);
 
-	
+
     xhr.onload = // callback : fonction anonyme
         function(){
             var donnee = JSON.stringify(this.responseText);
@@ -61,4 +80,3 @@ function valide() {
 		document.getElementById("ok").innerHTML = okf
 	}
 }
-
