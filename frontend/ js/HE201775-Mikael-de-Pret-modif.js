@@ -7,7 +7,7 @@
 function creerTableau1(rep, id){
 	let ligne1 = '';
 	for (let a of rep) {
-		ligne1 += '<option value=' + a.id + '>' + a.id + ' ' + a.sportif + '</option>' + '\n';
+		ligne1 += '<option value=' + a.id + '>' + a.sportif + '</option>' + '\n';
 	}
 	document.getElementById(id).innerHTML = ligne1;
 }
@@ -26,7 +26,7 @@ function creerTableau2(rep, id){
 function creerTableau3(rep, id){
 	let ligne3 = '';
 	for (let a of rep) {
-		ligne3 += '<option value=' + a.id + '>' + a.id + ' ' + a.sportifPrenom + '</option>' + '\n';
+		ligne3 += '<option value=' + a.id + '>' + a.sportifPrenom + '</option>' + '\n';
 	}
 	document.getElementById(id).innerHTML = ligne3;
 }
@@ -62,21 +62,31 @@ function modifier(){
 }
 
 function valide() {
-	let nom = newModifN.value;
-	let prenom = newModifP.value;
+	var nom = newModifN.value;
+	var prenom = newModifP.value;
 	let okf = "";
-	if(!nom) {
-		document.getElementById("!ok").innerHTML = " et Il n'y a eu aucun changement pour le nom "
+	if(!nom || !prenom) {
+		document.getElementById("pok").innerHTML = "veuiller remplir tous les champs"
 	}
+
 	else {
-		okf += '<span>' + 'le nom du joueur selectionné à bien été modifié en ' + nom + '</span>'
+		okf += '<span>' + 'le nom du joueur selectionné à bien été modifié en ' + nom + '</span> \n'
 		document.getElementById("ok").innerHTML = okf
-	}
-	if(!prenom) {
-		document.getElementById("!ok").innerHTML = " et Il n'y a eu aucun changement pour le prenom "
-	}
-	else{
 		okf += '<span>' + ' le prenom du joueur selectionné à bien été modifié en ' + prenom + '</span>'
 		document.getElementById("ok").innerHTML = okf
+	}
+}
+
+function synchro(y){
+	y.form.modifN.selectedIndex = y.selectedIndex;
+	y.form.modifP.selectedIndex  = y.selectedIndex;
+}
+
+function cache() {
+	let x = document.getElementById("pok");
+	if (x.style.display === "none" && (!nom || !prenom)) {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
 	}
 }
