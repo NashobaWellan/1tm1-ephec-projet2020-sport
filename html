@@ -9,7 +9,7 @@
 
 </head>
 
-<body onload='initPage(); <!--initPage1();-->'>
+<body onload='initPage();'>
     <header>
         <div id="logo">
             <p><img src="img/logo.png" alt="Personne qui tient un flambeau en main." class="imageLogo"></p>
@@ -35,7 +35,7 @@
 
 		<p><b>Start typing a name in the input field below:</b></p>
 					 
-    		<form  id="myForm" method="get" <!--action="modifier" onsubmit="valide()"-->>
+    		<form  id="myForm" method="get" onsubmit="valide()">
 				<fieldset>
 					<legend>Changement</legend>
 					
@@ -46,104 +46,13 @@
 						<input type="text" name="sportif" id="newModifN" value="" placeholder="nom">
 						<input type="text" name="sportif1" id="newModifP" value="" placeholder="prenom">
 						<label>Changement sport: </label>
-						<!-- <select id="sporttt"></select> -->
-						<!-- <input type="text" name="sport" placeholder="sport" id="newSport" value=""> -->
-						<!--<select id="tournoiii"></select>
-						<input type="text" placeholder="tournoi" id="newTournoi" value="">-->
-						<button type="button" onclick="modifier()<!--, valide()-->"><b>Soumettre</b></button>
+						<button type="button" onclick="modifier(), valide()"><b>Soumettre</b></button>
 						<button type="reset"><b>Réinitialiser</b></button>
-						<!--<p>Message : <em><span id="ok"></span></em></p>-->
+						<p>Message : <em><span id="ok"></span></em></p>
 				</fieldset>
 			</form>
     </div>
 
-	<!--<div id="formulaireTournoi"> -->
-
-		<!--<p><b>Start typing a name in the input field below:</b></p>-->
-
-		<!--<form  id="myForm1" method="put" action="modifier">-->
-		<!--	<fieldset>-->
-		<!--		<legend>Changement</legend>-->
-
-			<!--	<label>Joueur à changer : </label>-->
-			<!--	<label>Changement : </label>-->
-
-			<!--	<label>Changement sport: </label>-->
-				<!--<select id="sporttt"></select> -->
-				<!-- <input type="text" name="sport" placeholder="sport" id="newSport" value=""> -->
-				<!--<select id="tournoiii"></select>-->
-              <!--  <input type="text" placeholder="tournoi" id="newTournoi" value="">-->
-			<!--	<button type="button" onclick="modifier1(), valide()"><b>Soumettre</b></button>-->
-			<!--	<button type="reset"><b>Réinitialiser</b></button>-->
-			<!--	<p>Message : <em><span></span></em></p>-->
-		<!--	</fieldset>-->
-<!--		</form>-->
-<!--	</div> -->
-<!-- -->
-	<!-- <div> -->
-        <!-- <form> -->
-            <!-- <fieldset> -->
-                <!-- <legend>Nouveau joueur</legend> -->
-                <!-- sexe -->
-                <!-- <input id="Joueuse" type="radio" name="genre" value="femme" required> -->
-                <!-- <label for="Joueuse"> Joueuse</label> -->
-                <!-- <input id="Joueur" type="radio" name="genre" value="homme" required> -->
-                <!-- <label for="Joueur"> Joueur</label><br> -->
-                <!-- nom/prenom -->
-                <!-- <label>Nom/Prenom : </label> -->
-                <!-- <input type="text" placeholder="Nom/Prenom" required> -->
-                <!--  Année -->
-                <!-- <label for="annee"> Année victorieuse : </label> -->
-                <!-- <input id="annee" name="annee" type="date" required><br> -->
-                <!--  Tournoi -->
-                <!-- <label for="Tournoi">Tournoi : </label> -->
-                <!-- <select id="Tournoi" name="Tournoi" > -->
-                    <!-- <option value="RG">Roland-Garros</option> -->
-                    <!-- <option value="W">Wimbledon</option> -->
-                    <!-- <option value="OA">Open Australie</option> -->
-                    <!-- <option value="USP">US Open</option> -->
-                <!-- </select><br><br> -->
-                <!-- Soumettre/Reinitialiser -->
-                <!-- <button type="submit"><b>Soumettre</b></button> -->
-                <!-- <button type="reset"><b>Réinitialiser</b></button> -->
-                <!-- Message Soumettre -->
-                <!-- <div id="affichageMessage"> -->
-                    <!-- <p>Message : <em><span id="message">Pas de message !</span></em></p> -->
-                <!-- </div> -->
-            <!-- </fieldset> -->
-        <!-- </form> -->
-    <!-- </div> -->
-
-    <!-- <div id="formulaireInscription"> -->
-        <!-- <form> -->
-            <!-- <fieldset> -->
-                <!-- <legend>Formulaire abonnement</legend> -->
-                <!-- sexe -->
-                <!-- <input id="genreFemme" type="radio" name="genre" value="femme" required> -->
-                    <!-- <label for="genreFemme"> Madame</label> -->
-                <!-- <input id="genreHomme" type="radio" name="genre" value="homme" required> -->
-                     <!-- <label for="genreHomme"> Monsieur</label><br> -->
-                <!-- nom/prenom -->
-                <!-- <label>Nom : </label> -->
-                    <!-- <input type="text" placeholder="Nom" required> -->
-                <!-- <label>Prenom : </label> -->
-                    <!-- <input type="text" placeholder="Prenom" required> -->
-				<!-- age -->
-                <!-- <label for="naissance">Date de naissance : </label> -->
-                    <!-- <input id="naissance" name="naissance" type="date" required><br> -->
-                <!-- adresse mail -->
-                <!-- <label>Adresse mail : </label> -->
-                    <!-- <input type="email" placeholder="Adresse mail" required><br><br> -->
-                <!-- Soumettre/Reinitialiser -->
-                <!-- <button type="submit"><b>Soumettre</b></button> -->
-                 <!-- <button type="reset"><b>Réinitialiser</b></button> -->
-                <!-- Message Soumettre -->
-                <!-- <div id="affichageMessage"> -->
-                    <!-- <p>Message : <em><span id="message">Pas de message !</span></em></p> -->
-                <!-- </div> -->
-            <!-- </fieldset> -->
-        <!-- </form> -->
-    <!-- </div> -->
     <acid>
 
     </acid>
