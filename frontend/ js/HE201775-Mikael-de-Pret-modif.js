@@ -12,17 +12,6 @@ function creerTableau1(rep, id){
 	document.getElementById(id).innerHTML = ligne1;
 }
 
-
-
-function creerTableau2(rep, id){
-	let ligne2 = '';
-	for (let b of rep) {
-		ligne2 += '<option value=' + b.id + '>' + b.sportt + '</option>' + '\n';
-	}
-	document.getElementById(id).innerHTML = ligne2;
-}
-
-
 function creerTableau3(rep, id){
 	let ligne3 = '';
 	for (let a of rep) {
@@ -31,13 +20,6 @@ function creerTableau3(rep, id){
 	document.getElementById(id).innerHTML = ligne3;
 }
 
-function creerTableau4(rep, id){
-	let ligne4 = '';
-	for (let a of rep) {
-		ligne4 += '<option value=' + a.id + '>' + a.tournoii + '</option>' + '\n';
-	}
-	document.getElementById(id).innerHTML = ligne4;
-}
 
 function modifier(){
 	var selectBox1 = document.getElementById("modifN");
@@ -74,7 +56,7 @@ function valide() {
 		document.getElementById("ok").innerHTML = okf
 		okf += '<span>' + ' le prenom du joueur selectionné à bien été modifié en ' + prenom + '</span>'
 		document.getElementById("ok").innerHTML = okf
-		
+
 	}
 }
 
