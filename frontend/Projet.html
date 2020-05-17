@@ -40,15 +40,15 @@
 					<legend>Changement</legend>
 					
 						<label>Joueur à changer : </label>
-						<select id="modifN"></select>
-						<select id="modifP"></select>
+						<select id="modifN" onclick="synchro(this);"></select>
+						<select id="modifP" onclick="synchro(this);"></select>
 						<label>Changement : </label>
-						<input type="text" name="sportif" id="newModifN" value="" placeholder="nom">
-						<input type="text" name="sportif1" id="newModifP" value="" placeholder="prenom">
+						<input type="text" name="sportif" id="newModifN" value="" placeholder="nom" required>
+						<input type="text" name="sportif1" id="newModifP" value="" placeholder="prenom" required>
 						<button type="button" onclick="modifier(), valide(), initPage()"><b>Soumettre</b></button>
-						<button type="reset"><b>Réinitialiser</b></button>
-						<p>Message : <em><span id="ok"></span></em>
-							 		 <em><span id="!ok"></span></em></p>
+						<button type="reset" onclick="initPage(), cache()"><b>Réinitialiser</b></button>
+						<p>Message: <em><span id="ok"></span></em>
+							 		 <em><span id="pok"></span></em></p>
 				</fieldset>
 			</form>
     </div>
@@ -60,4 +60,3 @@
 
     </footer>
 </html>
-
