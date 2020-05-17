@@ -3,7 +3,7 @@ BEGIN
 
 	UPDATE dba.tbjoueur
      SET  joueurNom = sportifNewN, joueurPrenom = sportifNewP
-     WHERE  tbjoueur.joueurId = sportifN AND tbjoueur.joueurId = sportifP
+     WHERE  tbjoueur.joueurId = sportifN
 
 END
 
