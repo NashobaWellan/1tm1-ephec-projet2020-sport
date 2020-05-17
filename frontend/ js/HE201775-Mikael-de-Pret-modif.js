@@ -74,6 +74,7 @@ function valide() {
 		document.getElementById("ok").innerHTML = okf
 		okf += '<span>' + ' le prenom du joueur selectionné à bien été modifié en ' + prenom + '</span>'
 		document.getElementById("ok").innerHTML = okf
+		
 	}
 }
 
@@ -82,11 +83,4 @@ function synchro(y){
 	y.form.modifP.selectedIndex  = y.selectedIndex;
 }
 
-function cache() {
-	let x = document.getElementById("pok");
-	if (x.style.display === "none" && (!nom || !prenom)) {
-		x.style.display = "block";
-	} else {
-		x.style.display = "none";
-	}
-}
+
