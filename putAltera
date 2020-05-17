@@ -1,0 +1,8 @@
+ALTER PROCEDURE "DBA"."putAlterartion"(in sportifN int, sportifNewN char(30), sportifP int, sportifNewP char (30)/*, sportttt int, sportNew char(30)*//*, tournoiiii int, tournoiNew char(30)*/)
+BEGIN 
+
+	UPDATE dba.tbjoueur//, dba.tbsport
+     SET  joueurNom = sportifNewN, joueurPrenom = sportifNewP/*, sport = sportNew *///, tournoi = tournoiNEW
+     WHERE  tbjoueur.joueurId = sportifN //AND tbjoueur.joueurId = sportifP /*AND tbsport.sportId = sporttt */// AND tbtournoi.tournoiId = tournoiii
+
+END
