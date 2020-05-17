@@ -11,8 +11,7 @@ function initPage(){
 		creerTableau(JSON.parse(this.responseText), 'selection');
 		creerTableau1(JSON.parse(this.responseText), 'modifN');
 		creerTableau3(JSON.parse(this.responseText), 'modifP');
-		/*creerTableau2(JSON.parse(this.responseText), 'sporttt');*/
-		/*creerTableau4(JSON.parse(this.responseText), 'tournoiii');*/
+	
 
 	};
 	xhr.send() // envoyer
