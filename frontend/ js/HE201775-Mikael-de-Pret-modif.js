@@ -1,5 +1,9 @@
 "use strict"
 
+//Projet Database
+//------------------
+// 1TM1 / de Pret / Mikaël / HE201775
+
 function creerTableau1(rep, id){
 	let ligne1 = '';
 	for (let a of rep) {
@@ -26,7 +30,7 @@ function modifier(){
 	
 	let xhr = new XMLHttpRequest();
 	// xhr.alterr;
-	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value +'&sportifP=' + selectedValue3 +'&sportifNewP=' + selectBox21.value, true);
+	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value, true);
 
 	
     xhr.onload = // callback : fonction anonyme
