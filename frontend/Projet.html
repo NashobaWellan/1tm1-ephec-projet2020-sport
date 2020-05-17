@@ -35,21 +35,18 @@
 
 		<p><b>Start typing a name in the input field below:</b></p>
 					 
-    		<form  id="myForm" method="put" action="modifier">
+    		<form  id="myForm" method="put">
 				<fieldset>
 					<legend>Changement</legend>
 					
 						<label>Joueur à changer : </label>
-						<select id="modif"></select>
+						<select id="modifN"></select>
+						<select id="modifP"></select>
 						<label>Changement : </label>
-						<input type="text" name="sportif" id="newModif" value="" placeholder="prenom nom">
-						<label>Changement sport: </label>
-						<select id="sport"></select>
-						<input type="text" name="sport" placeholder="sport" id="newSport" value="">
-						<button type="button" onclick="modifier()"><b>Soumettre</b></button>
-					<button type="button" onclick="modifier1()"><b>Soumettre1</b></button>
-					<button type="reset"><b>Réinitialiser</b></button>
-						<p>Message : <em><span></span></em></p>
+						<input type="text" name="sportif" id="newModifN" value="" placeholder="nom">
+						<input type="text" name="sportif1" id="newModifP" value="" placeholder="prenom">
+						<button type="button" onclick="modifier(), valide()"><b>Soumettre</b></button>
+						<button type="reset"><b>Réinitialiser</b></button>
 				</fieldset>
 			</form>
     </div>
