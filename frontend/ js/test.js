@@ -11,25 +11,10 @@ function initPage(){
 		creerTableau(JSON.parse(this.responseText), 'selection');
 		creerTableau1(JSON.parse(this.responseText), 'modifN');
 		creerTableau3(JSON.parse(this.responseText), 'modifP');
-		/*creerTableau2(JSON.parse(this.responseText), 'sporttt');*/
-		/*creerTableau4(JSON.parse(this.responseText), 'tournoiii');*/
-
 	};
 	xhr.send() // envoyer
 }
-/*
-function initPage1(){
-	let xhr = new XMLHttpRequest();
-	xhr.open('get', 'spor', true); // préparer
-	xhr.onload = // callback : fonction anonyme
-		function(){
-			creerTableau2(JSON.parse(this.responseText), 'sporttt');
-			creerTableau4(JSON.parse(this.responseText), 'tournoiii');
 
-		};
-	xhr.send() // envoyer
-}
-*/
 function creerTableau(rep, id){
 	let ligne = '';
 	for (let e of rep) {
