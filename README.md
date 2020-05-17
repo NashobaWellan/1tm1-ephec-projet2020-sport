@@ -62,6 +62,15 @@ Ce service sera écrit par de Pret Roose de Calesberg Mikaël
 Un webservice permettant au utilisateur de modifier la page web  
 il sera en JSON/AJAX
 
+## Websercice de Mikaël de Pret
+Dans formulaire deux listes déroulante vont être placer à l'initiation de la page grâce à la fonction "initPage()" une pour le nom du joueur et l'autres pour le prenom du joueur qui sont synchroniser.
+Quand l'utilisateur placera les nouvelles données et soumettra le formulaire un message d'information s'affichera, la page sera rechargé et les données seront recuperer grâce à la fonction "modifier()" et envoyer en JSON grâce "JSON.stringify"
+
+le webservice "alterr" recois les paramètre et appele la procédure "putAlteration" en lui donnant les paramètres qui sont ici
+sportifN (ancien nom du joueur), sportifNewN (nouveau nom du joueur), sportifP (ancien prenom du joueur), sportifNewP (nouveau prenom du joueur). 
+la procédure va alors faire un update de la table "tbjoueur en remplacent le nom et le prenom 
+du joueur par les nouvelles données.
+
 # Diagramme ER
 
-![alt text](https://github.com/de-Pret-Mikael/1tm1-ephec-projet2020-sport/blob/master/frontend/img/oooo.PNG) 
+![alt text](https://github.com/de-Pret-Mikael/1tm1-ephec-projet2020-sport/blob/master/frontend/img/diag.PNG) 
