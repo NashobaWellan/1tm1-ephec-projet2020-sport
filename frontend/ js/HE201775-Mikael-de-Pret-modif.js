@@ -31,7 +31,7 @@ function modifier(){
 
 	let xhr = new XMLHttpRequest();
 	// xhr.alterr;
-	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value +'&sportifP=' + selectedValue3 +'&sportifNewP=' + selectBox21.value /*+ '&sportttt=' + selectedValue5 + '&sportNew=' + selectBox4.value *//*+ '&tournoiiii' + selectedValue8 + '&tournoiNew' + selectBox9*/, true);
+	xhr.open('get', 'alterr?sportifN=' + selectedValue1 + '&sportifNewN=' + selectBox2.value +'&sportifP=' + selectedValue3 +'&sportifNewP=' + selectBox21.value, true);
 
 
     xhr.onload = // callback : fonction anonyme
