@@ -3,24 +3,7 @@
 //Projet Database
 //------------------
 // 1TM1 / de Pret / Mikaël / HE201775
-/*
-function showHint(str) {
-	var selectedValue = selectBox.text[selectBox.selectedIndex].value;
-  if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "Find?sportif=" + str, true);
-    xmlhttp.send();
-  }
-}
-*/
+
 function creerTableau1(rep, id){
 	let ligne1 = '';
 	for (let a of rep) {
