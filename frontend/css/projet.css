@@ -31,3 +31,40 @@ body{
  width: 99%;
  height: 99%;
 }
+
+#myForm {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 100%;
+    height: 50%;
+    width: 50%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+#tables {
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 120%;
+}
+
+#change{
+    text-align: left;
+}
+
+#titre{
+    text-align: left;
+}
+#titre tr{
+    font-size: 130%;
+}
+
+
+#recap td{
+    border: 1px solid black;
+}
+
+#comming{
+    float: right;
+
+}
+
+
