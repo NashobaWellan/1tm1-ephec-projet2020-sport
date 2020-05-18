@@ -9,6 +9,8 @@ function initPage(){
 	xhr.onload = // callback : fonction anonyme
 	function(){
 		creerTableau(JSON.parse(this.responseText), 'selection');
+		creerTableau1(JSON.parse(this.responseText), 'modifN');
+		creerTableau3(JSON.parse(this.responseText), 'modifP');
 	};
 	xhr.send() // envoyer
 }
