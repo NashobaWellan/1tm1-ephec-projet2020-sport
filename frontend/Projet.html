@@ -19,34 +19,50 @@
         <img id="bleu" src="img\banniere.jpg" alt="Bannière bleu.">
         <img id="tete" src="img\welcome.jpg" alt="Image de plusieurs sports avec fond bleu.">
     </div>
-	<div>
+	<div id="comming">
+		<img src="img\unnamed.png">
+	</div>
+	<div id="tables">
 		<table>
 		<label for="selecJoueur">Selection du Joueur : </label>
                <select id="selection" onchange="trouveSportif()">
 	
                 </select>
-		
+			<thead id="titre">
+				<tr>
+					<th>tournoi</th>
+					<th>sport</th>
+					<th>année</th>
+				</tr>
+			</thead>
 			<tbody id="recap">
 			</tbody>
 		</table>
 	</div>
 
 	<div id="formulaireAlter">
-
-		<p><b>Start typing a name in the input field below:</b></p>
 					 
     		<form  id="myForm" method="get">
 				<fieldset>
-					<legend>Changement</legend>
-					
+					<legend id="change">Formulaire de Changement</legend>
+					<div>
 						<label>Joueur à changer : </label>
+					</div>
+					<div>
 						<select id="modifN" onclick="synchro(this);"></select>
 						<select id="modifP" onclick="synchro(this);"></select>
-						<label>Changement : </label>
+					</div>
+					<div>
+						<label id="charge">Changement : </label>
+					</div>
+					<div>
 						<input type="text" name="sportif" id="newModifN" value="" placeholder="nom" required>
 						<input type="text" name="sportif1" id="newModifP" value="" placeholder="prenom" required>
+					</div>
+					<div>
 						<button type="button" onclick="modifier(), valide(), initPage()"><b>Soumettre</b></button>
 						<button type="reset" onclick="initPage()"><b>Réinitialiser</b></button>
+					</div>
 						<p>Message: <em><span id="ok"></span></em>
 							 		 <em><span id="pok"></span></em></p>
 				</fieldset>
